@@ -1,0 +1,98 @@
+body {
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+    font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+nav {
+    padding: 0 2rem;
+}
+
+.content {
+    min-height: calc(100vh - 70px - 64px);
+    padding: 1.5rem 0;
+}
+
+.goods {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 1rem
+}
+
+.btn {
+    background-color: #311b92;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+}
+
+.spacer {
+    flex-grow: 1;
+}
+
+
+.cart {
+    position: fixed;
+    bottom: 2rem;
+    right: 2rem;
+
+    cursor: pointer;
+    z-index: 5;
+
+    padding: 1rem;
+    border: 0.1rem white solid;
+}
+
+.basket-list {
+    position: fixed;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    background-color: white;
+    width: 50rem;
+    max-width: 95%;
+
+    cursor: pointer;
+    animation: show 150ms ease-in-out;
+}
+
+.purple-cross{
+    color:#311b92;
+}
+
+@keyframes show {
+    from {
+        top: 70%;
+        opacity: 0;
+    }
+    to {
+        top: 50%;
+        opacity: 1;
+    }
+}
+
+.item-quantity{
+    cursor: pointer;
+    vertical-align: middle;
+}
+
+.create-order{
+    display: flex;
+    justify-content: center;
+}
+#toast-container{
+    top: 3rem !important;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+
